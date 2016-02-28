@@ -8,8 +8,8 @@ app.use(morgan('dev'));
 let pathname = path.join(process.cwd());
 app.use( express.static(pathname) );
 
-app.get('/new/:originalUrl', (req, res) => {
-	let originalUrl = req.params.originalUrl;
+app.get(/\/new\/(.+)/, (req, res) => {
+	let originalUrl = req.params[0];
 	res.status(200).json({ 'original_url': originalUrl });
 });
 

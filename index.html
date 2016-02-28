@@ -20,18 +20,21 @@
 		a:hover {
 			text-decoration: none;	
 		}
+		#line2 {
+			position: relative;
+			bottom: 25px;
+			padding-left: 28px;
+		}
 	</style>
 </head>
 <body>
-	<h1>URL Shortner API</h1>
-	<p>Created by Daynil - <a href="https://github.com/Daynil/timestamp-api">Github Repo</a></p>
+	<h1>URL Shortener API</h1>
+	<p>Created by Daynil - <a href="https://github.com/Daynil/url-shortener">Github Repo</a></p>
 	<h4>Append a URL to the end of the base URL:</h4>
-	<ul>
-		<li><p class="code">/new/https://www.google.com/</p></li>
-		<li><p class="code">/new/http://www.freecodecamp.com/challenges/url-shortener-microservice</p></li>
-	</ul>
+	<p class="code">/new/https://www.google.com/</p>
+	<p class="code">/new/http://www.freecodecamp.com/challenges/url-shortener-microservice</p>
 	<h4>Output for a query:</h4>
-	<p class="code">{ "original_url" : 'http://www.freecodecamp.com/challenges/url-shortener-microservice',
-					  "short_url" : "https:/daynil-url-short.herokuapp.com/4" }</p>	
+	<p class="code">{ "original_url" : 'http://www.freecodecamp.com/challenges/url-shortener-microservice',</p>
+	<p class="code" id="line2">"short_url" : "https://daynil-urlst.herokuapp.com/4" }</p>	
 </body>
 </html>
