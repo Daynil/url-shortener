@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Url Shortener Microservice</title>
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+	<style>
+		body {
+			margin: 0 auto;
+			margin-top: 20px;
+			width: 40%;
+		}
+		.code {
+			display: inline-block;
+			color: hsl(200, 69%, 46%);
+    		background-color: hsl(200, 37%, 96%);
+			padding: 0 5px 0 5px;
+		}
+		a:hover {
+			text-decoration: none;	
+		}
+	</style>
+</head>
+<body>
+	<h1>URL Shortner API</h1>
+	<p>Created by Daynil - <a href="https://github.com/Daynil/timestamp-api">Github Repo</a></p>
+	<h4>Append a URL to the end of the base URL:</h4>
+	<ul>
+		<li><p class="code">/new/https://www.google.com/</p></li>
+		<li><p class="code">/new/http://www.freecodecamp.com/challenges/url-shortener-microservice</p></li>
+	</ul>
+	<h4>Output for a query:</h4>
+	<p class="code">{ "original_url" : 'http://www.freecodecamp.com/challenges/url-shortener-microservice',
+					  "short_url" : "https:/daynil-url-short.herokuapp.com/4" }</p>	
+</body>
+</html>
