@@ -2,6 +2,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const validUrl = require('valid-url');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://daynil:d49nDcm%bYO%$d8C@ds019688.mlab.com:19688/urlshortenerservice');
@@ -40,7 +41,10 @@ app.use( express.static(pathname) );
 
 app.get(/\/new\/(.+)/, (req, res) => {
 	let originalUrl = req.params[0];  // Capture entered url
-	
+	if (!validUrl.isUri(originalUrl)) {
+		res.status(400).json({ 'error': originalUrl + ' is not a valid url!' });
+		return;
+	}
 	// Look for an existing shortened url for the requested URL and return it if exists
 	Url.findOne({ originalUrl: originalUrl })
 		.exec()
