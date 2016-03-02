@@ -4,7 +4,7 @@ const app = express();
 const path = require('path');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/urlshortener');
+mongoose.connect('mongodb://daynil:d49nDcm%bYO%$d8C@ds019688.mlab.com:19688/urlshortenerservice');
 
 let urlSchema = new mongoose.Schema({
 	 originalUrl: String,
